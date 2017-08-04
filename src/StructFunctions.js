@@ -12,7 +12,9 @@ const Struct = {
       Object.assign(cloneDeep(obj.obj), updateObj),
 
   clone: (obj) =>
-      struct(obj.struct)(cloneDeep(obj.obj))
+      struct(obj.struct)(cloneDeep(obj.obj)),
+
+  toObj: (obj) => obj.obj
 };
 
 module.exports = Struct;

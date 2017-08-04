@@ -35,6 +35,8 @@ describe('addition', () => {
     const cloned = Struct.clone(t);
     shallowequal(cloned.obj, { kees: 7, jan: 'henk' }).should.equal(true);
 
+    shallowequal(Struct.toObj(cloned), { kees: 7, jan: 'henk' }).should.equal(true);
+
     done();
   });
 });
