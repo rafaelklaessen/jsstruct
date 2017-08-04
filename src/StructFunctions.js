@@ -3,7 +3,7 @@ const cloneDeep = require('lodash/clonedeep');
 
 const Struct = {
   isStruct: (obj, struct) =>
-      struct ? objMatchesStruct(struct.struct, obj.obj) : !!obj.obj,
+      struct ? objMatchesStruct(struct.struct, obj.obj) : !!(obj || {}).obj,
 
   update: (obj, updateObj) =>
       struct(obj.struct)(Struct.updateObj(obj, updateObj)),
