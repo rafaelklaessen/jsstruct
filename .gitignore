@@ -58,4 +58,5 @@ typings/
 .env
 
 .DS_Store
-lib
+/struct.js
+/StructFunctions.js

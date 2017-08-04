@@ -1,7 +1,7 @@
 const should = require('should');
-const { struct } = require('../lib/struct');
+const { struct } = require('../struct');
 const shallowequal = require('shallowequal');
-const Struct = require('../lib/StructFunctions').default;
+const Struct = require('../StructFunctions').default;
 
 // Example data
 const structTypes = { a: 'number', b: 'string' };

@@ -2,9 +2,9 @@
   "name": "jsstruct",
   "version": "1.0.0",
   "description": "Elixir-like structs in JavaScript",
-  "main": "lib/struct.js",
+  "main": "struct.js",
   "scripts": {
-    "compile": "babel -d lib/ src/",
+    "compile": "babel -d ./ src/",
     "prepublish": "npm run compile",
     "test": "node_modules/.bin/mocha -w"
   },
