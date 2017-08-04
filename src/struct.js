@@ -1,6 +1,6 @@
-const cloneDeep = require('lodash/clonedeep');
+import cloneDeep from 'lodash/clonedeep';
 
-const struct = (structObj) => {
+export const struct = (structObj) => {
   const createStruct = (obj) => {
     if (!objMatchesStruct(structObj, obj)) throw new Error('Invalid struct data!')
 
@@ -15,9 +15,7 @@ const struct = (structObj) => {
   return createStruct;
 };
 
-module.exports.struct = struct;
-
-const objMatchesStruct = (struct, obj) =>
+export const objMatchesStruct = (struct, obj) =>
     (verifyFields(struct, obj) && verifyFields(obj, struct))
     && verifyTypes(struct, obj);
 
@@ -28,7 +26,3 @@ const verifyFields = (a, b) =>
 const verifyTypes = (struct, obj) =>
     Object.keys(struct).reduce((previous, current) =>
         previous ? typeof obj[current] == struct[current] : previous, true);
-
-module.exports.objMatchesStruct = objMatchesStruct;
-module.exports.verifyFields = verifyFields;
-module.exports.verifyTypes = verifyTypes;

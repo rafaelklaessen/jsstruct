@@ -1,5 +1,5 @@
-const { struct, objMatchesStruct } = require('./struct');
-const cloneDeep = require('lodash/clonedeep');
+import { struct, objMatchesStruct } from './struct';
+import cloneDeep from 'lodash/clonedeep';
 
 const Struct = {
   isStruct: (obj, struct) =>
@@ -17,4 +17,4 @@ const Struct = {
   toObj: (obj) => obj.obj
 };
 
-module.exports = Struct;
+export default Struct;

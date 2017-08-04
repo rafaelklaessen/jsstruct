@@ -2,9 +2,10 @@
   "name": "jsstruct",
   "version": "1.0.0",
   "description": "Elixir-like structs in JavaScript",
-  "main": "src/struct.js",
+  "main": "lib/struct.js",
   "scripts": {
-    "start": "node src/struct.js",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile",
     "test": "node_modules/.bin/mocha -w"
   },
   "repository": {
@@ -18,11 +19,16 @@
   },
   "homepage": "https://github.com/rafaelklaessen/jsstruct#readme",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
     "mocha": "^3.5.0",
     "shallowequal": "^1.0.2",
     "should": "^11.2.1"
   },
   "dependencies": {
     "lodash": "^4.17.4"
+  },
+  "peerDependencies": {
+    "babel-polyfill": "^6.23.0"
   }
 }

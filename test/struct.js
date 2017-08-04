@@ -1,5 +1,5 @@
 const should = require('should');
-const { struct, objMatchesStruct } = require('../src/struct');
+const { struct, objMatchesStruct } = require('../lib/struct');
 const shallowequal = require('shallowequal');
 
 // Example data
