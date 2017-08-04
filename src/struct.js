@@ -1,10 +1,21 @@
-const struct = (structObj) => {
-  const createStruct = function(obj) {
-    if (!objMatchesStruct(structObj, obj)) throw new Error('Invalid struct data!')
-    this.obj = obj;
+const cloneDeep = require('lodash/clonedeep');
 
-    return this;
+const struct = (structObj) => {
+  const structCloned = cloneDeep(structObj);
+
+  const createStruct = function(obj) {
+    const objCloned = cloneDeep(obj);
+    if (!objMatchesStruct(structCloned, objCloned)) throw new Error('Invalid struct data!')
+
+    const data = {
+      obj: Object.freeze(objCloned),
+      struct: Object.freeze(structCloned)
+    };
+
+    return data;
   }
+
+  createStruct.struct = Object.freeze(structCloned);
 
   return createStruct;
 };

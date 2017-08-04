@@ -21,5 +21,8 @@
     "mocha": "^3.5.0",
     "shallowequal": "^1.0.2",
     "should": "^11.2.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
   }
 }
