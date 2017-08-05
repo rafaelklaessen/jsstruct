@@ -1,6 +1,6 @@
 {
   "name": "jsstruct",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Elixir-like structs in JavaScript",
   "main": "struct.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/rafaelklaessen/jsstruct.git"
   },
   "author": "Rafael Klaessen",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rafaelklaessen/jsstruct/issues"
   },
