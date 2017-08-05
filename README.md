@@ -1,6 +1,6 @@
 # JSStruct
 
-Elixir-like structs in JavaScript.
+Immutable, Elixir-like structs in JavaScript.
 
 ## Installation
 `npm install jsstruct`
