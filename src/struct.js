@@ -4,10 +4,10 @@ export const struct = (structObj) => {
   const createStruct = (obj) => {
     if (!objMatchesStruct(structObj, obj)) throw new Error('Invalid struct data!')
 
-    return {
+    return Object.freeze({
       obj: Object.freeze(obj),
       struct: Object.freeze(structObj)
-    };
+    });
   }
 
   createStruct.struct = Object.freeze(structObj);
