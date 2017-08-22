@@ -11,8 +11,16 @@ describe('struct', () => {
     const myStruct = struct(structTypes);
     const t = myStruct(structData);
     shallowequal(t.obj, structData).should.equal(true);
-
     shallowequal(myStruct.struct, structTypes).should.equal(true);
+
+    done();
+  });
+
+  it('should make the given fields directly available on the struct', (done) => {
+    const myStruct = struct(structTypes);
+    const t = myStruct(structData);
+    t.a.should.equal(structData.a);
+    t.b.should.equal(structData.b);
 
     done();
   });
